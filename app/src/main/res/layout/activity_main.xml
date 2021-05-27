@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:cursorVisible="true"
+            android:textColor="@color/black"
+            android:id="@+id/text_exp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:id="@+id/text_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+
+
+    <!--    keypad root view-->
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:onClick="clear"
+            android:background="@drawable/ic_baseline_chevron_left_24"
+            android:layout_alignParentRight="true"
+            android:id="@+id/clear_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"/>
+        <!-- parent view for the horizont child view-->
+        <LinearLayout
+            android:layout_below="@+id/clear_btn"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--            horizontal child view-->
+            <LinearLayout
+                android:weightSum="4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_margin="@dimen/button_margin"
+                    android:onClick="cClick"
+                    android:text="C"
+
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"/>
+
+                <Button
+                    android:layout_margin="@dimen/button_margin"
+                    android:onClick="bracketClick"
+                    android:text="()"
+
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"/>
+                <Button
+                    android:layout_margin="@dimen/button_margin"
+
+                    android:onClick="percentageClick"
+                    android:text="%"
+
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"/>
+                <Button
+                    android:layout_margin="@dimen/button_margin"
+
+                    android:onClick="divisionClick"
+                    android:text="/"
+
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"/>
+
+
+            </LinearLayout>
+
+            <!--            horizontal child view-->
+            <LinearLayout
+                android:weightSum="4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_margin="@dimen/button_margin"
+
+                    android:onClick="sevenClick"
+                    android:text="7"
+
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"/>
+
+                <Button
+                    android:layout_margin="@dimen/button_margin"
+
+                    android:onClick="eightClick"
+                    android:text="8"
+
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"/>
+                <Button
+                    android:layout_margin="@dimen/button_margin"
+
+                    android:onClick="nineClick"
+                    android:text="9"
+
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"/>
+                <Button
+                    android:layout_margin="@dimen/button_margin"
+
+                    android:onClick="multiplyClick"
+                    android:text="*"
+
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"/>
+
+
+            </LinearLayout>
+
+            <!--            horizontal child view-->
+            <LinearLayout
+                android:weightSum="4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_margin="@dimen/button_margin"
+
+                    android:onClick="fourClick"
+                    android:text="4"
+
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"/>
+
+                <Button
+                    android:layout_margin="@dimen/button_margin"
+
+                    android:onClick="fiveClick"
+                    android:text="5"
+
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"/>
+                <Button
+                    android:layout_margin="@dimen/button_margin"
+
+                    android:onClick="sixClick"
+                    android:text="6"
+
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"/>
+                <Button
+                    android:layout_margin="@dimen/button_margin"
+
+                    android:onClick="minusClick"
+                    android:text="-"
+
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"/>
+
+
+            </LinearLayout>
+
+            <!--            horizontal child view-->
+            <LinearLayout
+                android:weightSum="4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_margin="@dimen/button_margin"
+
+                    android:onClick="oneClick"
+                    android:text="1"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"/>
+
+                <Button
+
+                    android:layout_margin="@dimen/button_margin"
+
+                    android:onClick="twoClick"
+                    android:text="2"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"/>
+                <Button
+
+                    android:layout_margin="@dimen/button_margin"
+
+                    android:onClick="threeClick"
+                    android:text="3"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"/>
+                <Button
+
+                    android:layout_margin="@dimen/button_margin"
+
+                    android:onClick="plusClick"
+                    android:text="+"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"/>
+
+
+            </LinearLayout>
+            <!--            horizontal child view-->
+            <LinearLayout
+                android:weightSum="4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+
+                    android:layout_margin="@dimen/button_margin"
+
+                    android:onClick="plusMinusClick"
+                    android:text="+/-"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"/>
+
+                <Button
+
+                    android:layout_margin="@dimen/button_margin"
+
+                    android:onClick="zeroClick"
+                    android:text="0"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"/>
+                <Button
+
+                    android:layout_margin="@dimen/button_margin"
+
+                    android:onClick="dotClick"
+                    android:text="."
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"/>
+                <Button
+                    android:layout_margin="@dimen/button_margin"
+
+                    android:onClick="equalsClick"
+                    android:text="="
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>
